@@ -1,265 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilal Al-Eck | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bilal Al-Eck | Portfolio</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial,sans-serif;
-            scroll-behavior:smooth;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    scroll-behavior:smooth;
+}
 
-        body{
-            background:#0f172a;
-            color:white;
-            line-height:1.6;
-        }
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    line-height:1.6;
+}
 
-        .container{
-            width:90%;
-            max-width:1100px;
-            margin:auto;
-        }
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
 
-        nav{
-            position:sticky;
-            top:0;
-            background:#1e293b;
-            padding:20px 0;
-            z-index:1000;
-            box-shadow:0 2px 10px rgba(0,0,0,0.3);
-        }
+nav{
+    position:sticky;
+    top:0;
+    background:rgba(30,41,59,0.95);
+    backdrop-filter:blur(10px);
+    padding:18px 0;
+    z-index:1000;
+}
 
-        nav .container{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
+nav .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        nav h2{
-            color:#38bdf8;
-        }
+nav h2{
+    color:#38bdf8;
+}
 
-        nav ul{
-            display:flex;
-            gap:20px;
-            list-style:none;
-        }
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            transition:.3s;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
 
-        nav a:hover{
-            color:#38bdf8;
-        }
+nav a:hover{
+    color:#38bdf8;
+}
 
-        header{
-            text-align:center;
-            padding:100px 20px;
-            background:#1e293b;
-        }
+header{
+    text-align:center;
+    padding:100px 20px;
+}
 
-        header h1{
-            font-size:48px;
-            color:#38bdf8;
-        }
+.avatar{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:48px;
+    font-weight:bold;
+    margin:0 auto 25px;
+    box-shadow:0 0 25px rgba(56,189,248,0.4);
+}
 
-        header h2{
-            margin:15px 0;
-            color:#cbd5e1;
-        }
+header h1{
+    font-size:48px;
+    color:#38bdf8;
+}
 
-        header p{
-            max-width:700px;
-            margin:auto;
-            color:#94a3b8;
-        }
+header h2{
+    margin:15px 0;
+    color:#cbd5e1;
+}
 
-        .btn-group{
-            margin-top:30px;
-        }
+header p{
+    max-width:700px;
+    margin:auto;
+    color:#94a3b8;
+}
 
-        .btn{
-            display:inline-block;
-            padding:12px 24px;
-            margin:10px;
-            background:#38bdf8;
-            color:#0f172a;
-            text-decoration:none;
-            border-radius:8px;
-            font-weight:bold;
-            transition:.3s;
-        }
+.btn-group{
+    margin-top:30px;
+}
 
-        .btn:hover{
-            background:#0ea5e9;
-            transform:translateY(-3px);
-        }
+.btn{
+    display:inline-block;
+    padding:12px 24px;
+    margin:10px;
+    background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+    color:#0f172a;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
 
-        section{
-            padding:60px 0;
-        }
+.btn:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 10px 20px rgba(56,189,248,0.35);
+}
 
-        h3{
-            text-align:center;
-            font-size:32px;
-            color:#38bdf8;
-            margin-bottom:30px;
-        }
+section{
+    padding:60px 0;
+}
 
-        .grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:20px;
-        }
+h3{
+    text-align:center;
+    font-size:32px;
+    color:#38bdf8;
+    margin-bottom:30px;
+}
 
-        .card{
-            background:#1e293b;
-            padding:25px;
-            border-radius:12px;
-            transition:.3s;
-        }
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
 
-        .card:hover{
-            transform:translateY(-8px);
-            background:#334155;
-        }
+.card{
+    background:rgba(30,41,59,0.9);
+    padding:25px;
+    border-radius:15px;
+    transition:.35s;
+    border:1px solid rgba(255,255,255,0.05);
+}
 
-        .about{
-            text-align:center;
-            max-width:800px;
-            margin:auto;
-            color:#cbd5e1;
-        }
+.card:hover{
+    transform:translateY(-10px);
+    background:#334155;
+    box-shadow:0 15px 25px rgba(0,0,0,0.3);
+}
 
-        .contact{
-            text-align:center;
-            color:#cbd5e1;
-        }
+.about{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    color:#cbd5e1;
+}
 
-        footer{
-            text-align:center;
-            padding:25px;
-            background:#1e293b;
-            color:#94a3b8;
-        }
-    </style>
+.contact{
+    text-align:center;
+    color:#cbd5e1;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#1e293b;
+    color:#94a3b8;
+}
+
+@media (max-width:768px){
+    nav .container{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    header h1{
+        font-size:36px;
+    }
+
+    .avatar{
+        width:110px;
+        height:110px;
+        font-size:36px;
+    }
+}
+</style>
 </head>
 <body>
 
-    <nav>
-        <div class="container">
-            <h2>Bilal.dev</h2>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<nav>
+    <div class="container">
+        <h2>Bilal.dev</h2>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <div class="avatar">BA</div>
+
+        <h1>Bilal Al-Eck</h1>
+        <h2>Biomedical Engineer | Aspiring Software Developer</h2>
+
+        <p>
+            Passionate Biomedical Engineer with professional experience in technical support,
+            maintenance, and biomedical innovation. Focused on engineering excellence and software growth.
+        </p>
+
+        <div class="btn-group">
+            <a href="https://github.com/YOURUSERNAME" class="btn" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/YOURLINKEDIN" class="btn" target="_blank">LinkedIn</a>
+            <a href="#" class="btn">Download CV</a>
         </div>
-    </nav>
+    </div>
+</header>
 
-    <header>
-        <div class="container">
-            <h1>Bilal Al-Eck</h1>
-            <h2>Biomedical Engineer | Aspiring Software Developer</h2>
-            <p>
-                Biomedical Engineer with hands-on experience in medical equipment maintenance,
-                technical support, and biomedical innovation.
-            </p>
+<section id="about">
+    <div class="container">
+        <h3>About Me</h3>
+        <p class="about">
+            Biomedical Engineer currently pursuing advanced studies in Biomedical Engineering,
+            with practical experience in medical equipment maintenance, troubleshooting,
+            biomedical solutions, and technical support.
+        </p>
+    </div>
+</section>
 
-            <div class="btn-group">
-                <a href="https://github.com/YOURUSERNAME" class="btn" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/YOURLINKEDIN" class="btn" target="_blank">LinkedIn</a>
+<section id="experience">
+    <div class="container">
+        <h3>Experience</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Medical Inter Pharma</h4>
+                <p>Maintenance, Sales & Product Specialist</p>
+            </div>
+
+            <div class="card">
+                <h4>New Mazloum Hospital</h4>
+                <p>Biomedical Engineering Intern</p>
+            </div>
+
+            <div class="card">
+                <h4>First Medic Company</h4>
+                <p>Biomedical Engineering Intern</p>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <section id="about">
-        <div class="container">
-            <h3>About Me</h3>
-            <p class="about">
-                I am a Biomedical Engineer passionate about healthcare technology,
-                engineering innovation, and software development.
-                Currently expanding my expertise in programming and technical solutions.
-            </p>
+<section id="skills">
+    <div class="container">
+        <h3>Skills</h3>
+        <div class="grid">
+            <div class="card">Biomedical Maintenance</div>
+            <div class="card">Technical Troubleshooting</div>
+            <div class="card">Python</div>
+            <div class="card">MATLAB</div>
+            <div class="card">Problem Solving</div>
+            <div class="card">Electronics</div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="experience">
-        <div class="container">
-            <h3>Experience</h3>
-            <div class="grid">
-                <div class="card">
-                    <h4>Medical Inter Pharma</h4>
-                    <p>Maintenance, Sales & Product Specialist</p>
-                </div>
+<section id="projects">
+    <div class="container">
+        <h3>Projects</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Personal Portfolio Website</h4>
+                <p>Responsive portfolio website built using HTML & CSS.</p>
+            </div>
 
-                <div class="card">
-                    <h4>New Mazloum Hospital</h4>
-                    <p>Biomedical Engineering Intern</p>
-                </div>
-
-                <div class="card">
-                    <h4>First Medic Company</h4>
-                    <p>Biomedical Engineering Intern</p>
-                </div>
+            <div class="card">
+                <h4>Senior Biomedical Project</h4>
+                <p>Led final year engineering project with research and implementation.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="skills">
-        <div class="container">
-            <h3>Skills</h3>
-            <div class="grid">
-                <div class="card">Biomedical Maintenance</div>
-                <div class="card">Technical Troubleshooting</div>
-                <div class="card">Python</div>
-                <div class="card">MATLAB</div>
-                <div class="card">Problem Solving</div>
-                <div class="card">Electronics</div>
-            </div>
-        </div>
-    </section>
+<section id="contact">
+    <div class="container contact">
+        <h3>Contact</h3>
+        <p>Email: aleckbilal@gmail.com</p>
+        <p>LinkedIn: Your LinkedIn Here</p>
+        <p>GitHub: Your GitHub Here</p>
+    </div>
+</section>
 
-    <section id="projects">
-        <div class="container">
-            <h3>Projects</h3>
-            <div class="grid">
-                <div class="card">
-                    <h4>Personal Portfolio Website</h4>
-                    <p>Designed and developed a responsive portfolio website using HTML/CSS.</p>
-                </div>
-
-                <div class="card">
-                    <h4>Senior Project</h4>
-                    <p>Led senior biomedical engineering graduation project with research and implementation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container contact">
-            <h3>Contact</h3>
-            <p>Email: aleckbilal@gmail.com</p>
-            <p>LinkedIn: Your LinkedIn Here</p>
-            <p>GitHub: Your GitHub Here</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 Bilal Al-Eck | All Rights Reserved</p>
-    </footer>
+<footer>
+    <p>© 2026 Bilal Al-Eck | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
