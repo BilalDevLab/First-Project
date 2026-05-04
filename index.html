@@ -1,85 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>BilalDevLab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilal Al-Eck | Portfolio</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
         body {
             background-color: #0f172a;
             color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 40px;
-            margin: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
-        }
-
-        h1 {
-            color: #38bdf8;
-            font-size: 42px;
-        }
-
-        h2 {
-            color: #60a5fa;
-            margin-top: 30px;
-        }
-
-        p, li {
-            font-size: 18px;
             line-height: 1.6;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
         }
 
-        li {
-            background: #334155;
-            margin: 10px auto;
-            padding: 12px;
-            width: 250px;
-            border-radius: 8px;
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: #1e293b;
         }
 
-        .footer {
-            margin-top: 30px;
+        header h1 {
+            font-size: 48px;
+            color: #38bdf8;
+        }
+
+        header h2 {
+            font-size: 24px;
+            margin: 15px 0;
+            color: #cbd5e1;
+        }
+
+        header p {
+            max-width: 700px;
+            margin: auto;
             color: #94a3b8;
-            font-size: 14px;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #38bdf8;
+            text-align: center;
+        }
+
+        .about, .contact {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            color: #cbd5e1;
+        }
+
+        .skills-list, .projects-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #334155;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #1e293b;
+            color: #94a3b8;
+            margin-top: 40px;
         }
     </style>
 </head>
-
 <body>
 
-    <div class="container">
-        <h1>Hi, I'm Bilal 👋</h1>
+    <header>
+        <div class="container">
+            <h1>Bilal Bassem Al-Eck</h1>
+            <h2>Biomedical Engineering Professional & Aspiring Software Developer</h2>
+            <p>
+                Passionate about technology, engineering, and continuous self-development.
+                Building expertise in software development while advancing my career in biomedical engineering.
+            </p>
+        </div>
+    </header>
 
-        <p>I am an aspiring Software Developer.</p>
+    <section>
+        <div class="container about">
+            <h3>About Me</h3>
+            <p>
+                I am a biomedical engineering professional passionate about innovation,
+                software development, and solving real-world problems through technology.
+                I continuously work on improving my technical and engineering skills.
+            </p>
+        </div>
+    </section>
 
-        <h2>About Me</h2>
-        <p>I am currently learning programming, Python, and Web Development step by step.</p>
+    <section>
+        <div class="container">
+            <h3>Skills</h3>
+            <div class="skills-list">
+                <div class="card">HTML</div>
+                <div class="card">Python</div>
+                <div class="card">Problem Solving</div>
+                <div class="card">Biomedical Equipment</div>
+            </div>
+        </div>
+    </section>
 
-        <h2>Skills I'm Learning</h2>
-        <ul>
-            <li>HTML</li>
-            <li>Python</li>
-            <li>Problem Solving</li>
-        </ul>
+    <section>
+        <div class="container">
+            <h3>Projects</h3>
+            <div class="projects-list">
+                <div class="card">
+                    <h4>Personal Portfolio Website</h4>
+                    <p>Designed and built my personal portfolio using HTML and CSS.</p>
+                </div>
 
-        <h2>Goal</h2>
-        <p>To become a professional Software Developer 🚀</p>
+                <div class="card">
+                    <h4>Future Project</h4>
+                    <p>More projects will be added here soon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <p class="footer">Thanks for visiting my first project!</p>
-    </div>
+    <section>
+        <div class="container contact">
+            <h3>Contact</h3>
+            <p>Email: your.email@example.com</p>
+            <p>LinkedIn: Your LinkedIn Here</p>
+            <p>GitHub: Your GitHub Here</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Bilal Al-Eck. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
