@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilal Al-Eck | Biomedical Engineer Portfolio</title>
+    <title>Bilal Al-Eck | Portfolio</title>
 
     <style>
         *{
@@ -11,6 +11,7 @@
             padding:0;
             box-sizing:border-box;
             font-family:Arial,sans-serif;
+            scroll-behavior:smooth;
         }
 
         body{
@@ -25,9 +26,44 @@
             margin:auto;
         }
 
+        nav{
+            position:sticky;
+            top:0;
+            background:#1e293b;
+            padding:20px 0;
+            z-index:1000;
+            box-shadow:0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav .container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        nav h2{
+            color:#38bdf8;
+        }
+
+        nav ul{
+            display:flex;
+            gap:20px;
+            list-style:none;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            transition:.3s;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+        }
+
         header{
             text-align:center;
-            padding:80px 20px;
+            padding:100px 20px;
             background:#1e293b;
         }
 
@@ -37,16 +73,35 @@
         }
 
         header h2{
-            font-size:24px;
-            color:#cbd5e1;
             margin:15px 0;
+            color:#cbd5e1;
         }
 
         header p{
-            max-width:750px;
+            max-width:700px;
             margin:auto;
             color:#94a3b8;
-            font-size:18px;
+        }
+
+        .btn-group{
+            margin-top:30px;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:12px 24px;
+            margin:10px;
+            background:#38bdf8;
+            color:#0f172a;
+            text-decoration:none;
+            border-radius:8px;
+            font-weight:bold;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#0ea5e9;
+            transform:translateY(-3px);
         }
 
         section{
@@ -74,18 +129,13 @@
         }
 
         .card:hover{
-            transform:translateY(-5px);
+            transform:translateY(-8px);
             background:#334155;
-        }
-
-        .card h4{
-            color:#60a5fa;
-            margin-bottom:10px;
         }
 
         .about{
             text-align:center;
-            max-width:850px;
+            max-width:800px;
             margin:auto;
             color:#cbd5e1;
         }
@@ -96,103 +146,114 @@
         }
 
         footer{
-            background:#1e293b;
             text-align:center;
-            padding:20px;
+            padding:25px;
+            background:#1e293b;
             color:#94a3b8;
-            margin-top:40px;
         }
     </style>
 </head>
 <body>
 
+    <nav>
+        <div class="container">
+            <h2>Bilal.dev</h2>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
             <h1>Bilal Al-Eck</h1>
-            <h2>Biomedical Engineer | MSc Candidate | Aspiring Software Developer</h2>
+            <h2>Biomedical Engineer | Aspiring Software Developer</h2>
             <p>
                 Biomedical Engineer with hands-on experience in medical equipment maintenance,
-                technical support, troubleshooting, and biomedical solutions.
-                Passionate about engineering innovation, technology, and continuous professional growth.
+                technical support, and biomedical innovation.
             </p>
+
+            <div class="btn-group">
+                <a href="https://github.com/YOURUSERNAME" class="btn" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/YOURLINKEDIN" class="btn" target="_blank">LinkedIn</a>
+            </div>
         </div>
     </header>
 
-    <section>
+    <section id="about">
         <div class="container">
             <h3>About Me</h3>
             <p class="about">
-                I am a Biomedical Engineer currently pursuing an MSc in Electronic Engineering with emphasis in Biomedical Engineering.
-                I combine technical engineering expertise with a passion for software development and innovation,
-                aiming to create impactful solutions in healthcare and technology.
+                I am a Biomedical Engineer passionate about healthcare technology,
+                engineering innovation, and software development.
+                Currently expanding my expertise in programming and technical solutions.
             </p>
         </div>
     </section>
 
-    <section>
+    <section id="experience">
         <div class="container">
-            <h3>Professional Experience</h3>
+            <h3>Experience</h3>
             <div class="grid">
-
                 <div class="card">
                     <h4>Medical Inter Pharma</h4>
                     <p>Maintenance, Sales & Product Specialist</p>
-                    <p>2024 – 2026</p>
                 </div>
 
                 <div class="card">
                     <h4>New Mazloum Hospital</h4>
                     <p>Biomedical Engineering Intern</p>
-                    <p>2024</p>
                 </div>
 
                 <div class="card">
                     <h4>First Medic Company</h4>
                     <p>Biomedical Engineering Intern</p>
-                    <p>2024</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="skills">
         <div class="container">
             <h3>Skills</h3>
             <div class="grid">
-
-                <div class="card">Medical Equipment Maintenance</div>
+                <div class="card">Biomedical Maintenance</div>
                 <div class="card">Technical Troubleshooting</div>
-                <div class="card">Preventive Maintenance</div>
-                <div class="card">Biomedical Device Inspection</div>
                 <div class="card">Python</div>
                 <div class="card">MATLAB</div>
-                <div class="card">Electronics</div>
                 <div class="card">Problem Solving</div>
-
+                <div class="card">Electronics</div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="projects">
         <div class="container">
-            <h3>Certifications</h3>
+            <h3>Projects</h3>
             <div class="grid">
+                <div class="card">
+                    <h4>Personal Portfolio Website</h4>
+                    <p>Designed and developed a responsive portfolio website using HTML/CSS.</p>
+                </div>
 
-                <div class="card">ISO 13485 – Quality Management Systems</div>
-                <div class="card">Fundamentals of Biomedical Engineering</div>
-                <div class="card">CPR, AED & First Aid</div>
-
+                <div class="card">
+                    <h4>Senior Project</h4>
+                    <p>Led senior biomedical engineering graduation project with research and implementation.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="contact">
         <div class="container contact">
             <h3>Contact</h3>
             <p>Email: aleckbilal@gmail.com</p>
-            <p>LinkedIn: linkedin.com/in/bilal-b-al-eck-6354a2367</p>
-            <p>GitHub: Add Your GitHub Here</p>
+            <p>LinkedIn: Your LinkedIn Here</p>
+            <p>GitHub: Your GitHub Here</p>
         </div>
     </section>
 
